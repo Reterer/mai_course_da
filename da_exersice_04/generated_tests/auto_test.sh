@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for ((i = 0; i < 10; i++))
+for ((i = 0; i < 100; i++))
 do
     python3 ./generator.py 
     ../solution/solution < randomtest1000.txt > randomtest1000.txt.res

@@ -33,6 +33,7 @@ private:
     std::istream& textStream;           // Поток, из которого считывается текст
 
     std::map<TAlpha, std::vector<int> > badChar; // Структура, хранящая смещения для ППС
+    std::vector<int> LFunction;                  // Структура, хранящая смещения для ПХС
     std::vector<int> lFunction;                  // Структура, хранящая смещения для ПХС
     std::vector<int> nFunction;                  // Структура, реверснутая зет-функция
     std::vector<int> mFunction;                  // Структура, хранящая длину подстроки текста, которая точно совпадет с суффиксом паттерна
