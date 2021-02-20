@@ -5,7 +5,7 @@ import re
 UNIC_WORD = 4
 MAX_LEN_WORD = 1
 LEN_TEXT = 10000
-LEN_PATTERN = 5
+LEN_PATTERN = 7
 
 def generate_word():
     alpha = [chr(i) for i in range(ord('a'), ord('z'))]
@@ -27,10 +27,10 @@ text = ' '.join(generate_str(words, LEN_TEXT))
 pattern = ' '.join(generate_str(words, LEN_PATTERN))
 
 
-with open("randomtest1000.txt", "w") as f:
+with open("randomtest10000.txt", "w") as f:
     f.write(pattern + '\n')
     f.write(text + "\n\n")
-with open("randomtest1000.txt.ans", "w") as f:
+with open("randomtest10000.txt.ans", "w") as f:
     res = [i.start()//2 for i in re.finditer(f"(?={pattern})", text)]
     for r in res:
         f.write(f"1, {r+1}\n")
